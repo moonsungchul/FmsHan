@@ -66,12 +66,12 @@ class KonlParser:
 
     def parserNouns(self, intext):
         buf = []
-        buf.append(rr.parserKomoran(intext))
-        buf.append(rr.parserKkma(intext))
-        buf.append(rr.parserHannanum(intext))
-        buf.append(rr.parserTwitter(intext))
-        buf.append(rr.parserMecab(intext))
-        buf.append(rr.parserOkt(intext))
+        buf.append(self.parserKomoran(intext))
+        buf.append(self.parserKkma(intext))
+        buf.append(self.parserHannanum(intext))
+        buf.append(self.parserTwitter(intext))
+        buf.append(self.parserMecab(intext))
+        buf.append(self.parserOkt(intext))
 
 
         dic = {}
@@ -116,7 +116,8 @@ if __name__ == '__main__':
     #rr.posMecab(intext)
     #rr.posTwitter(intext)
     #rr.posOkt(intext)
-    rr.parserPos(intext)
+    ret = rr.parserPos(intext)
+    print(ret)
     
     #rr.parserKkma(intext)
     #rr.parserHannanum(intext)
